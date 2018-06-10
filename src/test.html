@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<!-- File for testing the results of API Calls -->
+<meta charset="utf-8">
+<script>
+    /* Variables */
+    let newObject;
+    let search;
+
+    search = " "; // Put URL Here
+
+    /* XML Request */
+    let xhr = new XMLHttpRequest(); 
+    xhr.open("GET", search, true); 
+    xhr.send(); // sending the request
+    xhr.onreadystatechange = function () { 
+        if (this.readyState === this.DONE) { 
+            newObject = JSON.parse(xhr.responseText); 
+            console.log(newObject);
+        }
+    }
+</script>
+</head>
