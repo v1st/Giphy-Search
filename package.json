@@ -4,7 +4,6 @@
   "description": "Giphy search is a simple single page web app used to search for relevant gif's within Giphy's database.",
   "main": "index.js",
   "dependencies": {
-    "gulp": "^3.9.1",
     "jquery": "^3.3.1"
   },
   "devDependencies": {
