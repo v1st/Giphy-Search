@@ -58,6 +58,14 @@ body {
     padding: 0 2rem; }
     .main-body #textbox:focus {
       outline: none; }
+  .main-body .card {
+    float: left;
+    width: 40%;
+    margin: 2%;
+    border: 1px solid #09050D; }
+    .main-body .card img {
+      width: 48%;
+      height: auto; }
 
 .gif-container {
   background: #FEFEFE;

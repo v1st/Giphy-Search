@@ -45,11 +45,14 @@ function foundGifs(value){
 
     /* Displaying Gifs */
     area = $("#gifs");
+    area.html('');
+
     x = 0;
     $.each(value.data,function(){
         let image = $(`<img src="${value.data[x].images.original.url}">`);
-        console.log(value.data[x]);
-        area.append(image);
+        let div = $('<div class="card"></div>');
+        div.append(image);
+        area.append(div);
         x++;
     });
 }
