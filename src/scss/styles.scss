@@ -1,5 +1,113 @@
+$dark: #09050D;
+$grey: #B7B7CA;
+$white: #EBEBF0;
+$purple: #5268f4;
+$dark-purple: #4B355B;
+$light-purple: #7ba8f5;
+$light-blue: #7beef5;
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    color: $dark;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    background: $white;
+    width: 100%;
+    margin-bottom: 10rem;
+}
+
+#banner,
+.main-body,
+.search-container,
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner {
+    width: 100%;
+    height: 20rem;
+    background: linear-gradient(90deg, rgba(123, 238, 245, 1) 0%, rgba(82, 104, 244, 1) 100%);
+    .title {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #FFF;
+        margin-bottom: 4rem;
+        text-transform: uppercase;
+    }
+}
+
+.main-body {
+    flex: 1;
+    justify-content: flex-end;
+    margin-top: -5rem;
+    .search-container {
+        background: #FEFEFE;
+        width: 80rem;
+        height: 10rem;
+        padding: 0 2rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        box-shadow: 0px 5px 8px rgba($dark, $alpha: 0.05);
+        margin-bottom: 2rem;
+    }
+    #textbox {
+        width: 100%;
+        height: 4rem;
+        color: $dark;
+        border-radius: 0.5rem;
+        border: 1px solid $grey;
+        font-size: 3rem;
+        padding: 0 2rem;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.gif-container {
+    background: #FEFEFE;
+    width: 80rem;
+    min-height: 30rem;
+    height: auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0px 5px 8px rgba($dark, $alpha: 0.05);
+}
+
+.card {}
+
+#footer {
+    position: absolute;
+    flex-direction: row;
+    width: 100%;
+    height: 8rem;
+    bottom: 0;
+    overflow: hidden;
+    margin-top: 5rem;
+    #button__about,
+    #button__api,
+    #button__repo {
+        width: 15rem;
+        height: 4rem;
+        background: #7ba8f5;
+        color: $white;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        margin: 0 2rem;
+        text-transform: uppercase;
+        background: linear-gradient(225deg, rgba(123,168,245,1) 0%, rgba(82,104,244,1) 100%);
+    }
 }
