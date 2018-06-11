@@ -1,3 +1,4 @@
+$("#textbox").change(getSearch());
 // Function for getting the value of the user search 
 function getSearch(){
     /* Variables */
