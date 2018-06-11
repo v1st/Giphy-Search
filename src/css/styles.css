@@ -98,3 +98,7 @@ body {
     margin: 0 2rem;
     text-transform: uppercase;
     background: linear-gradient(225deg, #7ba8f5 0%, #5268f4 100%); }
+
+#bottom_text {
+  text-align: center;
+  margin-top: 1em; }
