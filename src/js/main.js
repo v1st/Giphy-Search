@@ -1,4 +1,6 @@
-$("#textbox").change(getSearch());
+/* Event Listener */
+$("#textbox").change(getSearch); 
+
 // Function for getting the value of the user search 
 function getSearch(){
     /* Variables */
@@ -21,7 +23,33 @@ function search(value, offset){
     xhr.onreadystatechange = function () { 
         if (this.readyState === this.DONE) { 
             newObject = JSON.parse(xhr.responseText); 
-            console.log(newObject);
+            checkingResults(newObject);
         }
     }
+}
+// Function for checking the results of the search
+function checkingResults(value){
+
+    /* Checking the Search Results */
+    if(value.data.length > 0){
+        foundGifs(value); // Populating page
+    } else {
+        badSearch(); // Displaying Error Message
+    }
+}
+// Function for populating the page
+function foundGifs(value){
+    /* Variables */
+    let area;
+    let x;
+
+    /* Displaying Gifs */
+    area = $("#gifs");
+    x = 0;
+    $.each(value.data,function(){
+        let image = $(`<img src="${value.data[x].images.original.url}">`);
+        console.log(value.data[x]);
+        area.append(image);
+        x++;
+    });
 }
