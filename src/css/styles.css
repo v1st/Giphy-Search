@@ -88,7 +88,6 @@ body {
     padding: 2rem;
     text-align: center;
     border-radius: 0.5rem;
-<<<<<<< HEAD
     box-shadow: 0px 5px 8px rgba(9, 5, 13, 0.05);
     transition: ease-in-out 0.5s;
     transition: .8s opacity; }
@@ -103,33 +102,6 @@ body {
       height: 4rem;
       margin: auto auto 2rem auto;
       bottom: 0; }
-=======
-    border: 1px solid #B7B7CA;
-    font-size: 3rem;
-    padding: 0 2rem; }
-    .main-body #textbox:focus {
-      outline: none; }
-  .main-body .card {
-    float: left;
-    width: 40%;
-    margin: 2%;
-    border: 1px solid #09050D; }
-    .main-body .card img {
-      width: 48%;
-      height: auto; }
-
-.gif-container {
-  background: #FEFEFE;
-  width: 80rem;
-  min-height: 30rem;
-  height: auto;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 0.5rem;
-  box-shadow: 0px 5px 8px rgba(9, 5, 13, 0.05); }
-  .gif-container h1 {
-    font-size: 25px; }
->>>>>>> 44030eda5d5a0e4242b97a3063acfa5bf316d80a
 
 #footer {
   position: absolute;
@@ -139,33 +111,3 @@ body {
   bottom: 0;
   overflow: hidden;
   margin-top: 5rem; }
-<<<<<<< HEAD
-=======
-  #footer #button__about,
-  #footer #button__api,
-  #footer #button__repo {
-    width: 15rem;
-    height: 4rem;
-    background: #7ba8f5;
-    color: #EBEBF0;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    margin: 0 2rem;
-    text-transform: uppercase;
-    background: linear-gradient(225deg, #7ba8f5 0%, #5268f4 100%); }
-
-#bottom_text {
-  text-align: center;
-  margin-top: 1em; }
-  #bottom_text h2 {
-    font-size: 25px; }
-    #bottom_text h2 span {
-      font-size: 25px; }
-  #bottom_text p {
-    font-size: 20px; }
-    #bottom_text p a {
-      font-size: 18px; }
-  #bottom_text a {
-    font-size: 20px; }
->>>>>>> 44030eda5d5a0e4242b97a3063acfa5bf316d80a
