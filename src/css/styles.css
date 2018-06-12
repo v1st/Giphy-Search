@@ -76,6 +76,8 @@ body {
   text-align: center;
   border-radius: 0.5rem;
   box-shadow: 0px 5px 8px rgba(9, 5, 13, 0.05); }
+  .gif-container h1 {
+    font-size: 25px; }
 
 #footer {
   position: absolute;
@@ -102,3 +104,13 @@ body {
 #bottom_text {
   text-align: center;
   margin-top: 1em; }
+  #bottom_text h2 {
+    font-size: 25px; }
+    #bottom_text h2 span {
+      font-size: 25px; }
+  #bottom_text p {
+    font-size: 20px; }
+    #bottom_text p a {
+      font-size: 18px; }
+  #bottom_text a {
+    font-size: 20px; }

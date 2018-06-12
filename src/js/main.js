@@ -85,15 +85,15 @@ function bottom(value) {
         area.slideDown("slow");
         if (value == "about") {
             area.html("<p>" + "Giphy Search was made by two Front End Developers" + "<br>" +
-                "<a href='https://martinezdesigns.net'>Jared Martinez</a>" + "<br>" +
-                "<a>Brandon *Insert Last Name Here*</a>" +
+                "<a href='https://martinezdesigns.net'>Jared Martinez</a>" + " and " +
+                "<a href='https://github.com/v1st'>Brandon *Insert Last Name Here*</a>" +
                 "</p>");
         } else if (value == "api") {
             area.html("<a href='https://developers.giphy.com/'>Giphy Search Uses the Giphy API</a>");
         } else if (value == "repo") {
             area.html("<a href='https://github.com/v1st/Giphy-Search'>Look over the Codes</a>");
         }
-    }, 1000);
+    }, 1200);
 }
 // Function for setting the year a the bottom
 function getYear(){
