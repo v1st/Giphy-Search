@@ -24,6 +24,27 @@ body {
   justify-content: center;
   align-items: center; }
 
+.button {
+  position: relative;
+  width: 15rem;
+  height: 4rem;
+  background: #7ba8f5;
+  color: #EBEBF0;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  text-transform: uppercase;
+  border: 5px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.35);
+  border-bottom-width: 5px;
+  transition: all 0.1s;
+  cursor: pointer; }
+  .button:active {
+    border-bottom-width: 0px;
+    top: 2px; }
+  .button:focus {
+    outline: none; }
+
 #banner {
   width: 100%;
   height: 20rem;
@@ -37,7 +58,6 @@ body {
 
 .main-body {
   flex: 1;
-  justify-content: flex-end;
   margin-top: -5rem; }
   .main-body .search-container {
     background: #FEFEFE;
@@ -48,26 +68,40 @@ body {
     border-radius: 0.5rem;
     box-shadow: 0px 5px 8px rgba(9, 5, 13, 0.05);
     margin-bottom: 2rem; }
-  .main-body #textbox {
-    width: 100%;
-    height: 4rem;
-    color: #09050D;
+    .main-body .search-container #textbox {
+      width: 100%;
+      height: 4rem;
+      color: #09050D;
+      border-radius: 0.5rem;
+      border: 1px solid #B7B7CA;
+      font-size: 3rem;
+      padding: 0 2rem; }
+      .main-body .search-container #textbox:focus {
+        outline: none; }
+  .main-body .gif-container {
+    flex-flow: column wrap;
+    position: relative;
+    background: #FEFEFE;
+    width: 80rem;
+    min-height: 20rem;
+    height: auto;
+    padding: 2rem;
+    text-align: center;
     border-radius: 0.5rem;
-    border: 1px solid #B7B7CA;
-    font-size: 3rem;
-    padding: 0 2rem; }
-    .main-body #textbox:focus {
-      outline: none; }
-
-.gif-container {
-  background: #FEFEFE;
-  width: 80rem;
-  min-height: 30rem;
-  height: auto;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 0.5rem;
-  box-shadow: 0px 5px 8px rgba(9, 5, 13, 0.05); }
+    box-shadow: 0px 5px 8px rgba(9, 5, 13, 0.05);
+    transition: ease-in-out 0.5s;
+    transition: .8s opacity; }
+    .main-body .gif-container:hover #card {
+      opacity: 0.3; }
+    .main-body .gif-container #card {
+      width: 33.3%; }
+      .main-body .gif-container #card:hover {
+        opacity: 1; }
+    .main-body .gif-container #load {
+      width: 15rem;
+      height: 4rem;
+      margin: auto auto 2rem auto;
+      bottom: 0; }
 
 #footer {
   position: absolute;
@@ -77,16 +111,3 @@ body {
   bottom: 0;
   overflow: hidden;
   margin-top: 5rem; }
-  #footer #button__about,
-  #footer #button__api,
-  #footer #button__repo {
-    width: 15rem;
-    height: 4rem;
-    background: #7ba8f5;
-    color: #EBEBF0;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    margin: 0 2rem;
-    text-transform: uppercase;
-    background: linear-gradient(225deg, #7ba8f5 0%, #5268f4 100%); }

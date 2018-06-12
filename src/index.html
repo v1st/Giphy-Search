@@ -17,19 +17,21 @@
     </section>
     <main class="main-body">
         <section class="search-container">
-            <input type="text" placeholder="Search for gifs" id="textbox">
+            <input autofocus type="text" placeholder="Search for gifs" id="textbox">
         </section>
 
-        <section class="gif-container" id="gifs">
-            <div class="card"></div>
+        <section class="gif-container">
+            <div id="gifs"></div>
+            <button class="button" id="load">Load More</button>
         </section>
 
     </main>
 
     <footer id="footer">
-        <button id="button__about">About</button>
-        <button id="button__api">API</button>
-        <button id="button__repo">Repo</button>
+        <div id="bottom_text">Giphy Search Copyright &copy; <span id="year"></span></div>
+        <button class="button" id="button__about">About</button>
+        <button class="button" id="button__api">API</button>
+        <button class="button" id="button__repo">Repo</button>
     </footer>
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
