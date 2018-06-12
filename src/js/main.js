@@ -69,6 +69,11 @@ function foundGifs(value) {
         x++;
     });
 }
+// Function for Displaying an Error Message
+function badSearch(){
+    let area = $("#gifs");
+    area.html("<h1>" + "Whoops, can't seem to find anything. Try again!" + "</h1>");
+}
 // Function for displaying bottom section 
 function bottom(value) {
     /* Variables */
