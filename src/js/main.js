@@ -4,6 +4,7 @@ $(function () {
     getYear();
     /* Event Listeners */
     $("#textbox").change(getSearch);
+    $("#load").click(loadMore);
     $("#button__about").click(function () {
         bottom("about")
     });
@@ -14,6 +15,15 @@ $(function () {
         bottom("repo")
     });
 });
+
+// Load more button
+let offset = 25;
+function loadMore() {
+    let value = $("#textbox").val();
+    search(value, offset);
+    offset += 25;
+}
+
 // Function for getting the value of the user search 
 function getSearch() {
     /* Variables */
@@ -105,8 +115,6 @@ function getYear() {
 // Change banner gradient 
 (function gradient() {
     const banner = $("#banner");
-
-    let rgb;
     let r = {
         i: 168,
         start: 168,
