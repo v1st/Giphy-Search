@@ -1,3 +1,4 @@
+"use strict";
 $(function () {
     /* Setting year */
     getYear();
@@ -13,7 +14,6 @@ $(function () {
         bottom("repo")
     });
 });
-
 // Function for getting the value of the user search 
 function getSearch() {
     /* Variables */
@@ -42,16 +42,12 @@ function search(value, offset) {
 }
 // Function for checking the results of the search
 function checkingResults(value) {
-
-    /* Checking the Search Results */
-    if (value.data.length > 0) {
-        foundGifs(value); // Populating page
-    } else {
-        badSearch(); // Displaying Error Message
-    }
+    // Displays results or error message if not found
+    const load = $('#load');
+    (value.data.length > 0) ? foundGifs(value, load): badSearch(load);
 }
 // Function for populating the page
-function foundGifs(value) {
+function foundGifs(value, load) {
     /* Variables */
     let area;
     let x;
@@ -68,17 +64,19 @@ function foundGifs(value) {
         area.append(div);
         x++;
     });
+    load.css('display', 'flex');
 }
 // Function for Displaying an Error Message
-function badSearch(){
+function badSearch(load) {
     let area = $("#gifs");
-    area.html("<h1>" + "Whoops, can't seem to find anything. Try again!" + "</h1>");
+    area.html(`<h1>Whoops, can't seem to find anything. Try again!</h1>`);
+    load.css('display', 'none');
 }
 // Function for displaying bottom section 
 function bottom(value) {
     /* Variables */
     let area = $("#bottom_text");
-    
+
     /* Removing and showing new text */
     area.slideUp("slow");
     setTimeout(function () {
@@ -96,7 +94,7 @@ function bottom(value) {
     }, 1000);
 }
 // Function for setting the year a the bottom
-function getYear(){
+function getYear() {
     /* Variables */
     let area = $("#year");
     let d = new Date;
@@ -104,3 +102,44 @@ function getYear(){
     /* Displaying Year */
     area.html(d.getFullYear());
 }
+// Change banner gradient 
+(function gradient() {
+    const banner = $("#banner");
+
+    let rgb;
+    let r = {
+        i: 168,
+        start: 168,
+        end: 51,
+        flag: 1
+    }
+    let g = {
+        i: 58,
+        start: 58,
+        end: 79,
+        flag: -1
+    }
+    let b = {
+        i: 204,
+        start: 204,
+        end: 255,
+        flag: -1
+    }
+
+    function changeRGB() {
+        changeHue(r);
+        changeHue(g);
+        changeHue(b);
+        banner.css('backgroundColor', `rgb(${r.i},${g.i},${b.i})`);
+        setTimeout(changeRGB, 100);
+    }
+
+    function changeHue(obj) {
+        if (obj.i === obj.start || obj.i === obj.end) {
+            obj.flag *= -1
+        };
+        obj.i += obj.flag;
+    }
+
+    changeRGB();
+})();
