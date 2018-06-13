@@ -1,9 +1,9 @@
 $dark: #09050D;
 $grey: #B7B7CA;
 $white: #EBEBF0;
-$purple: #5268f4;
+$purple: #334fff;
 $dark-purple: #4B355B;
-$light-purple: #7ba8f5;
+$light-purple: #a83acc;
 $light-blue: #7beef5;
 * {
     padding: 0;
@@ -25,9 +25,12 @@ body {
     margin-bottom: 12rem;
 }
 
+/* HEADER ###################################### */
+
 #banner,
 .main-body,
 .search-container,
+.button,
 #footer {
     display: flex;
     flex-direction: column;
@@ -39,12 +42,13 @@ body {
     position: relative;
     width: 15rem;
     height: 4rem;
-    background: #7ba8f5;
+    background: $light-purple;
     color: $white;
     border-radius: 10px;
     font-size: 1.5rem;
     margin: 0 2rem;
     text-transform: uppercase;
+    text-decoration: none;
     border: 5px solid transparent;
     border-bottom-color: rgba(0, 0, 0, 0.35);
     border-bottom-width: 5px;
@@ -62,85 +66,99 @@ body {
 #banner {
     width: 100%;
     height: 20rem;
-    background: linear-gradient(90deg, rgba(123, 238, 245, 1) 0%, rgba(82, 104, 244, 1) 100%);
-    .title {
-        font-size: 4rem;
-        font-weight: bold;
-        color: #FFF;
-        margin-bottom: 4rem;
-        text-transform: uppercase;
-    }
+    background: rgb(168, 58, 204);
+    
 }
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+/* MAIN CONTENT ###################################### */
 
 .main-body {
     flex: 1;
     margin-top: -5rem;
-    .search-container {
-        background: #FEFEFE;
-        width: 80rem;
-        height: 10rem;
-        padding: 0 2rem;
-        text-align: center;
-        border-radius: 0.5rem;
-        box-shadow: 0px 5px 8px rgba($dark, $alpha: 0.05);
-        margin-bottom: 2rem;
-        #textbox {
-            width: 100%;
-            height: 4rem;
-            color: $dark;
-            border-radius: 0.5rem;
-            border: 1px solid $grey;
-            font-size: 3rem;
-            padding: 0 2rem;
-            &:focus {
-                outline: none;
-            }
-        }
-    }
-    .gif-container {
-        position: relative;
-        background: #FEFEFE;
-        width: 80rem;
-        min-height: 20rem;
-        max-height: auto;
-        padding: 2rem;
-        text-align: center;
-        border-radius: 0.5rem;
-        box-shadow: 0px 5px 8px rgba($dark, $alpha: 0.05);
-        transition: ease-in-out 0.5s;
-        transition: .8s opacity;
-        &:hover .card {
-            opacity: 0.3;
-        }
-        #gifs {
-            max-width: 100%;
-            display: flex;
-            flex-flow: row wrap;
-            flex-wrap: wrap;
-            h1 {
-                font-size: 3rem;
-                color: $dark;
-            }
-            .card {
-                width: 30%;
-                margin: 1%;
-                cursor: pointer;
-                &:hover {
-                    opacity: 1;
-                }
-                img {
-                    width: 100%;
-                }
-            }
-        }
-    }
-    #load {
-        width: 15rem;
-        height: 4rem;
-        margin: 2rem auto 1rem auto;
-        bottom: 0;
+}
+
+.search-container {
+    background: #FEFEFE;
+    width: 80rem;
+    height: 10rem;
+    padding: 0 2rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0px 5px 8px rgba($dark, $alpha: 0.05);
+    margin-bottom: 2rem;
+}
+
+#textbox {
+    width: 100%;
+    height: 4rem;
+    color: $dark;
+    border-radius: 0.5rem;
+    border: 1px solid $grey;
+    font-size: 3rem;
+    padding: 0 2rem;
+    text-align: center;
+    &:focus {
+        outline: none;
     }
 }
+
+.gif-container {
+    position: relative;
+    background: #FEFEFE;
+    width: 80rem;
+    min-height: 20rem;
+    max-height: auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0px 5px 8px rgba($dark, $alpha: 0.05);
+    transition: ease-in-out 0.5s;
+    transition: .8s opacity;
+    &:hover .card {
+        opacity: 0.3;
+    }
+}
+
+#gifs {
+    max-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    h1 {
+        font-size: 3rem;
+        color: $dark;
+        margin: 0 auto;
+    }
+    .card {
+        width: 30%;
+        margin: 1%;
+        cursor: pointer;
+        &:hover {
+            opacity: 1;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#load {
+    display: none;
+    width: 15rem;
+    height: 4rem;
+    margin: 2rem auto 1rem auto;
+    bottom: 0;
+}
+
+/* FOOTER ###################################### */
 
 #footer {
     position: absolute;
@@ -150,14 +168,16 @@ body {
     bottom: 0;
     overflow: hidden;
     margin-top: 5rem;
-    #btn-container {
-        display: flex;
-        align-items: center;
-        height: 5rem;
-    }
-    #bottom__text,
-    #year {
-        font-size: 2rem;
-        margin: 1rem 0;
-    }
+}
+
+#btn-container {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+}
+
+#bottom__text,
+#year {
+    font-size: 2rem;
+    margin: 1rem 0;
 }
