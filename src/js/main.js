@@ -12,12 +12,12 @@ $(function () {
     let typed = new Typed('.titleWord', {
         strings: ['Search', 'Fun', 'API', "Awesome"],
         typeSpeed: 100,
-        startDelay: 100, 
-        backSpeed: 100, 
+        startDelay: 100,
+        backSpeed: 100,
         backDelay: 3000,
         smartBackspace: true,
         loop: true,
-     });
+    });
 });
 
 // Load more button
@@ -95,18 +95,26 @@ function about() {
     let $text = $("<p>Giphy Search About Text</p>");
     let $load = $("#load");
 
+    document.getElementById("textbox").value = ''; // Clearing the search value
+
     /* Removing and showing new text */
-    $area.slideUp("slow");
-    setTimeout(function(){
-        $load.css("display", "none");
-        $area.html('');
-    }, 800)
-    setTimeout(function () {
+    if ($area[0].childElementCount > 0) {
+        $area.slideUp("slow");
+        setTimeout(function () {
+            $load.css("display", "none");
+            $area.html('');
+        }, 800)
+        setTimeout(function () {
+            $area.append($title);
+            $area.append($text);
+            $area.slideDown("slow");
+        }, 1000);
+    } else {
+        $area.slideUp("fast");
         $area.append($title);
         $area.append($text);
         $area.slideDown("slow");
-    }, 1000);
-
+    }
 }
 // Function for setting the year a the bottom
 function getYear() {
