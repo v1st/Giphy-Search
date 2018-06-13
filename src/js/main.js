@@ -24,6 +24,7 @@ $(function () {
 let offset = 25;
 
 function loadMore() {
+    $('#divBox').slideUp("slow");
     let value = $("#textbox").val();
     search(value, offset);
     offset += 25;
@@ -80,6 +81,7 @@ function foundGifs(value, load) {
         $x++;
     });
     load.css('display', 'flex');
+    $('#divBox').slideDown("slow");
 }
 // Function for Displaying an Error Message
 function badSearch(load) {
