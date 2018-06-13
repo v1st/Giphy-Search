@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "gulp": "^3.9.1",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "typed.js": "^2.0.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

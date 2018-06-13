@@ -70,7 +70,7 @@ body {
     
 }
 
-.title {
+.title, .titleWord {
     font-size: 4rem;
     font-weight: bold;
     color: #FFF;
@@ -78,6 +78,10 @@ body {
     text-transform: uppercase;
 }
 
+.typed-cursor {
+    margin-left: .1em;
+    font-size: 4.5rem;
+}
 /* MAIN CONTENT ###################################### */
 
 .main-body {
@@ -133,9 +137,16 @@ body {
     flex-flow: row wrap;
     flex-wrap: wrap;
     h1 {
+        width: 100%;
         font-size: 3rem;
         color: $dark;
         margin: 0 auto;
+    }
+    p{
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        font-size: 1.5rem;
     }
     .card {
         width: 30%;

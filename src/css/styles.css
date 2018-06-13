@@ -53,12 +53,16 @@ body {
   height: 20rem;
   background: #a83acc; }
 
-.title {
+.title, .titleWord {
   font-size: 4rem;
   font-weight: bold;
   color: #FFF;
   margin-bottom: 4rem;
   text-transform: uppercase; }
+
+.typed-cursor {
+  margin-left: .1em;
+  font-size: 4.5rem; }
 
 /* MAIN CONTENT ###################################### */
 .main-body {
@@ -108,9 +112,15 @@ body {
   flex-flow: row wrap;
   flex-wrap: wrap; }
   #gifs h1 {
+    width: 100%;
     font-size: 3rem;
     color: #09050D;
     margin: 0 auto; }
+  #gifs p {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem; }
   #gifs .card {
     width: 30%;
     margin: 1%;

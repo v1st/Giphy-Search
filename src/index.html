@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+
     <title>Giphy Search</title>
 </head>
-
 <body>
+    <!-- SECTION#BANNER STARTS HERE -->
     <section id="banner">
-        <h1 class="title">Giphy Search</h1>
+        <h1 class="title">Giphy <span class="titleWord"></span></h1>
     </section>
+    <!-- SECTION#BANNER ENDS HERE -->
+
+    <!-- MAIN STARTS HERE -->
     <main class="main-body">
         <section class="search-container">
             <input autofocus type="text" placeholder="Search for gifs" id="textbox">
         </section>
+        <!-- /.search-container -->
 
         <section class="gif-container">
             <div id="gifs"></div>
             <a class="button" id="load">Load More</a>
         </section>
-
+        <!-- /.gif-container -->
     </main>
+    <!-- MAIN ENDS HERE -->
 
+    <!-- FOOTER STARTS HERE -->
     <footer id="footer">
         <div id="btn-container">
             <a class="button" id="button__about">About</a>
             <a class="button" id="button__api" href="https://developers.giphy.com/" >API</a>
             <a class="button" id="button__repo" href="https://github.com/v1st/Giphy-Search">Repo</a>
         </div>
+        <!-- /div.btn-container -->
+
         <div id="bottom__text">Giphy Search Copyright &copy;
             <span id="year"></span>
         </div>
+        <!-- /div#bottom__text -->
+
     </footer>
+    <!-- FOOTER ENDS HERE -->
 
+    <!-- jQuery -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-</body>
 
+    <!-- typed.js -->
+    <script type="text/javascript" src="js/typed.js"></script>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script> 
+    </script>
+</body>
 </html>

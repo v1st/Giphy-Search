@@ -2,22 +2,27 @@
 $(function () {
     /* Setting year */
     getYear();
+
     /* Event Listeners */
     $("#textbox").change(getSearch);
     $("#load").click(loadMore);
-    $("#button__about").click(function () {
-        bottom("about")
-    });
-    $("#button__api").click(function () {
-        bottom("api")
-    });
-    $("#button__repo").click(function () {
-        bottom("repo")
-    });
+    $("#button__about").click(about);
+
+    /* Typed JS Title */
+    let typed = new Typed('.titleWord', {
+        strings: ['Search', 'Fun', 'API', "Awesome"],
+        typeSpeed: 100,
+        startDelay: 100, 
+        backSpeed: 100, 
+        backDelay: 3000,
+        smartBackspace: true,
+        loop: true,
+     });
 });
 
 // Load more button
 let offset = 25;
+
 function loadMore() {
     let value = $("#textbox").val();
     search(value, offset);
@@ -27,12 +32,12 @@ function loadMore() {
 // Function for getting the value of the user search 
 function getSearch() {
     /* Variables */
-    let value;
+    let $value;
 
     /* Collecting Value and calling Search Function */
-    value = $("#textbox").val();
+    $value = $("#textbox").val();
 
-    search(value, 0);
+    search($value, 0);
 }
 // Function for calling the API with the search
 function search(value, offset) {
@@ -59,58 +64,58 @@ function checkingResults(value) {
 // Function for populating the page
 function foundGifs(value, load) {
     /* Variables */
-    let area;
-    let x;
+    let $area;
+    let $x;
 
     /* Displaying Gifs */
-    area = $("#gifs");
-    area.html('');
+    $area = $("#gifs");
+    $area.html('');
 
-    x = 0;
+    $x = 0;
     $.each(value.data, function () {
-        let image = $(`<img src="${value.data[x].images.original.url}">`);
-        let div = $('<div class="card"></div>');
-        div.append(image);
-        area.append(div);
-        x++;
+        let $image = $(`<img src="${value.data[$x].images.original.url}">`);
+        let $div = $('<div class="card"></div>');
+        $div.append($image);
+        $area.append($div);
+        $x++;
     });
     load.css('display', 'flex');
 }
 // Function for Displaying an Error Message
 function badSearch(load) {
-    let area = $("#gifs");
-    area.html(`<h1>Whoops, can't seem to find anything. Try again!</h1>`);
+    let $area = $("#gifs");
+    $area.html(`<h1>Whoops, can't seem to find anything. Try again!</h1>`);
     load.css('display', 'none');
 }
 // Function for displaying bottom section 
-function bottom(value) {
+function about() {
     /* Variables */
-    let area = $("#bottom_text");
+    let $area = $("#gifs");
+    let $title = $("<h1>About</h1>");
+    let $text = $("<p>Giphy Search About Text</p>");
+    let $load = $("#load");
 
     /* Removing and showing new text */
-    area.slideUp("slow");
+    $area.slideUp("slow");
+    setTimeout(function(){
+        $load.css("display", "none");
+        $area.html('');
+    }, 800)
     setTimeout(function () {
-        area.slideDown("slow");
-        if (value == "about") {
-            area.html("<p>" + "Giphy Search was made by two Front End Developers" + "<br>" +
-                "<a href='https://martinezdesigns.net'>Jared Martinez</a>" + "<br>" +
-                "<a>Brandon *Insert Last Name Here*</a>" +
-                "</p>");
-        } else if (value == "api") {
-            area.html("<a href='https://developers.giphy.com/'>Giphy Search Uses the Giphy API</a>");
-        } else if (value == "repo") {
-            area.html("<a href='https://github.com/v1st/Giphy-Search'>Look over the Codes</a>");
-        }
+        $area.append($title);
+        $area.append($text);
+        $area.slideDown("slow");
     }, 1000);
+
 }
 // Function for setting the year a the bottom
 function getYear() {
     /* Variables */
-    let area = $("#year");
+    let $area = $("#year");
     let d = new Date;
 
     /* Displaying Year */
-    area.html(d.getFullYear());
+    $area.html(d.getFullYear());
 }
 // Change banner gradient 
 (function gradient() {
@@ -151,3 +156,4 @@ function getYear() {
 
     changeRGB();
 })();
+// Function for changing title using typed.js
