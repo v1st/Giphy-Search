@@ -62,7 +62,8 @@ body {
 
 .typed-cursor {
   margin-left: .1em;
-  font-size: 4.5rem; }
+  font-size: 4.5rem;
+  color: #fff; }
 
 /* MAIN CONTENT ###################################### */
 .main-body {
