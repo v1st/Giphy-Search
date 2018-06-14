@@ -12,8 +12,7 @@ html {
 
 body {
   background: #EBEBF0;
-  width: 100%;
-  margin-bottom: 12rem; }
+  width: 100%; }
 
 /* HEADER ###################################### */
 #banner,
@@ -28,7 +27,7 @@ body {
 
 .button {
   position: relative;
-  width: 15rem;
+  width: 7rem;
   height: 4rem;
   background: #a83acc;
   color: #EBEBF0;
@@ -50,11 +49,14 @@ body {
 
 #banner {
   width: 100%;
-  height: 20rem;
+  height: 10rem;
   background: #a83acc; }
+  #banner h1 {
+    margin-top: 2em; }
 
-.title, .titleWord {
-  font-size: 4rem;
+.title,
+.titleWord {
+  font-size: 3rem;
   font-weight: bold;
   color: #FFF;
   margin-bottom: 4rem;
@@ -62,17 +64,16 @@ body {
 
 .typed-cursor {
   margin-left: .1em;
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: #fff; }
 
 /* MAIN CONTENT ###################################### */
 .main-body {
-  flex: 1;
-  margin-top: -5rem; }
+  flex: 1; }
 
 .search-container {
   background: #FEFEFE;
-  width: 80rem;
+  width: 100%;
   height: 10rem;
   padding: 0 2rem;
   text-align: center;
@@ -95,7 +96,7 @@ body {
 .gif-container {
   position: relative;
   background: #FEFEFE;
-  width: 80rem;
+  width: 100%;
   min-height: 20rem;
   max-height: auto;
   padding: 2rem;
@@ -140,20 +141,51 @@ body {
 
 /* FOOTER ###################################### */
 #footer {
-  position: absolute;
-  flex-direction: column;
   width: 100%;
   height: 10rem;
   bottom: 0;
-  overflow: hidden;
-  margin-top: 5rem; }
+  margin-top: 18rem; }
 
 #btn-container {
   display: flex;
   align-items: center;
-  height: 5rem; }
+  height: 2rem; }
 
 #bottom__text,
 #year {
   font-size: 2rem;
-  margin: 1rem 0; }
+  margin: 2rem 0; }
+
+@media only screen and (min-width: 1025px) {
+  body {
+    margin-bottom: 12rem; }
+  /* HEADER ###################################### */
+  .button {
+    width: 15rem;
+    height: 4rem; }
+  #banner {
+    height: 20rem; }
+  .title,
+  .titleWord {
+    font-size: 4rem; }
+  .typed-cursor {
+    font-size: 4.5rem; }
+  /* MAIN CONTENT ###################################### */
+  .main-body {
+    margin-top: -5rem; }
+  .search-container {
+    width: 80rem;
+    height: 10rem; }
+  .gif-container {
+    width: 80rem; }
+  /* FOOTER ###################################### */
+  #footer {
+    position: absolute;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 5rem; }
+  #btn-container {
+    height: 5rem; }
+  #bottom__text,
+  #year {
+    margin: 1rem 0; } }

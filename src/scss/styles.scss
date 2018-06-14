@@ -18,15 +18,11 @@ html {
     position: relative;
     min-height: 100%;
 }
-
 body {
     background: $white;
     width: 100%;
-    margin-bottom: 12rem;
 }
-
 /* HEADER ###################################### */
-
 #banner,
 .main-body,
 .search-container,
@@ -37,10 +33,9 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .button {
     position: relative;
-    width: 15rem;
+    width: 7rem;
     height: 4rem;
     background: $light-purple;
     color: $white;
@@ -62,37 +57,35 @@ body {
         outline: none;
     }
 }
-
 #banner {
     width: 100%;
-    height: 20rem;
+    height: 10rem;
     background: rgb(168, 58, 204);
-    
+    h1{
+        margin-top: 2em;
+    }
 }
-
-.title, .titleWord {
-    font-size: 4rem;
+.title,
+.titleWord {
+    font-size: 3rem;
     font-weight: bold;
     color: #FFF;
     margin-bottom: 4rem;
     text-transform: uppercase;
 }
-
 .typed-cursor {
     margin-left: .1em;
-    font-size: 4.5rem;
+    font-size: 4rem;
     color: #fff;
 }
-/* MAIN CONTENT ###################################### */
 
+/* MAIN CONTENT ###################################### */
 .main-body {
     flex: 1;
-    margin-top: -5rem;
 }
-
 .search-container {
     background: #FEFEFE;
-    width: 80rem;
+    width: 100%;
     height: 10rem;
     padding: 0 2rem;
     text-align: center;
@@ -100,7 +93,6 @@ body {
     box-shadow: 0px 5px 8px rgba($dark, $alpha: 0.05);
     margin-bottom: 2rem;
 }
-
 #textbox {
     width: 100%;
     height: 4rem;
@@ -114,11 +106,10 @@ body {
         outline: none;
     }
 }
-
 .gif-container {
     position: relative;
     background: #FEFEFE;
-    width: 80rem;
+    width: 100%;
     min-height: 20rem;
     max-height: auto;
     padding: 2rem;
@@ -131,7 +122,6 @@ body {
         opacity: 0.3;
     }
 }
-
 #gifs {
     max-width: 100%;
     display: flex;
@@ -143,7 +133,7 @@ body {
         color: $dark;
         margin: 0 auto;
     }
-    p{
+    p {
         display: inline-block;
         text-align: center;
         width: 100%;
@@ -161,7 +151,6 @@ body {
         }
     }
 }
-
 #load {
     display: none;
     width: 15rem;
@@ -169,27 +158,66 @@ body {
     margin: 2rem auto 1rem auto;
     bottom: 0;
 }
-
 /* FOOTER ###################################### */
-
 #footer {
-    position: absolute;
-    flex-direction: column;
     width: 100%;
     height: 10rem;
     bottom: 0;
-    overflow: hidden;
-    margin-top: 5rem;
+    margin-top: 18rem;
 }
-
 #btn-container {
     display: flex;
     align-items: center;
-    height: 5rem;
+    height: 2rem;
 }
-
 #bottom__text,
 #year {
     font-size: 2rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
+}
+
+@media only screen and (min-width: 1025px) {
+    body {
+        margin-bottom: 12rem;
+    }
+    /* HEADER ###################################### */
+    .button {
+        width: 15rem;
+        height: 4rem;
+    }
+    #banner {
+        height: 20rem;
+    }
+    .title,
+    .titleWord {
+        font-size: 4rem;
+    }
+    .typed-cursor {
+        font-size: 4.5rem;
+    }
+    /* MAIN CONTENT ###################################### */
+    .main-body {
+        margin-top: -5rem;
+    }
+    .search-container {
+        width: 80rem;
+        height: 10rem;
+    }
+    .gif-container {
+        width: 80rem;
+    }
+    /* FOOTER ###################################### */
+    #footer {
+        position: absolute;
+        flex-direction: column;
+        overflow: hidden;
+        margin-top: 5rem;
+    }
+    #btn-container {
+        height: 5rem;
+    }
+    #bottom__text,
+    #year {
+        margin: 1rem 0;
+    }
 }

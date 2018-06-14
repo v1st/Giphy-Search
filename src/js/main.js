@@ -112,6 +112,7 @@ function about() {
             $area.slideDown("slow");
         }, 1000);
     } else {
+        $('#divBox').css("display", "block"); // Displaying the area
         $area.slideUp("fast");
         $area.append($title);
         $area.append($text);
