@@ -94,7 +94,9 @@ function about() {
     /* Variables */
     let $area = $("#gifs");
     let $title = $("<h1>About</h1>");
-    let $text = $("<p>Giphy Search About Text</p>");
+    let $text = $("<p>Giphy Search was made by two Front-End Web Developers, using the Giphy Developer API.</p>");
+    let $linkJM = $("<a href='https://martinezdesigns.net'>Jared</a>");
+    let $linkB = $("<a href='https://github.com/v1st'>Brandon</a>");
     let $load = $("#load");
 
     document.getElementById("textbox").value = ''; // Clearing the search value
@@ -109,6 +111,8 @@ function about() {
         setTimeout(function () {
             $area.append($title);
             $area.append($text);
+            $area.append($linkJM);
+            $area.append($linkB);
             $area.slideDown("slow");
         }, 1000);
     } else {
@@ -116,6 +120,8 @@ function about() {
         $area.slideUp("fast");
         $area.append($title);
         $area.append($text);
+        $area.append($linkJM);
+        $area.append($linkB);
         $area.slideDown("slow");
     }
 }

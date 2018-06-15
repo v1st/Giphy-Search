@@ -133,11 +133,27 @@ body {
         color: $dark;
         margin: 0 auto;
     }
-    p {
+    p, a {
         display: inline-block;
         text-align: center;
         width: 100%;
         font-size: 1.5rem;
+    }
+    a{
+        color: $purple;
+        margin-top: .2em;
+        width: auto;
+        text-decoration: none;
+        border-bottom: 1px solid #fff;
+        transition: all .8s;
+        &:hover {
+            border-color: $purple;
+            transition: all .8s;
+        }
+        &:first-of-type{
+            margin-left: 25%;
+            margin-right: 15%;
+        }
     }
     .card {
         width: 30%;
@@ -205,6 +221,15 @@ body {
     }
     .gif-container {
         width: 80rem;
+    }
+    #gifs{
+        a{
+            margin-top: .5em;
+            &:first-of-type{
+                margin-left: 35%;
+                margin-right: 20%;
+            }
+        }
     }
     /* FOOTER ###################################### */
     #footer {

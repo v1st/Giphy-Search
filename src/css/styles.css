@@ -118,11 +118,24 @@ body {
     font-size: 3rem;
     color: #09050D;
     margin: 0 auto; }
-  #gifs p {
+  #gifs p, #gifs a {
     display: inline-block;
     text-align: center;
     width: 100%;
     font-size: 1.5rem; }
+  #gifs a {
+    color: #334fff;
+    margin-top: .2em;
+    width: auto;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    transition: all .8s; }
+    #gifs a:hover {
+      border-color: #334fff;
+      transition: all .8s; }
+    #gifs a:first-of-type {
+      margin-left: 25%;
+      margin-right: 15%; }
   #gifs .card {
     width: 30%;
     margin: 1%;
@@ -178,6 +191,11 @@ body {
     height: 10rem; }
   .gif-container {
     width: 80rem; }
+  #gifs a {
+    margin-top: .5em; }
+    #gifs a:first-of-type {
+      margin-left: 35%;
+      margin-right: 20%; }
   /* FOOTER ###################################### */
   #footer {
     position: absolute;
