@@ -144,6 +144,10 @@ body {
       opacity: 1; }
     #gifs .card img {
       width: 100%; }
+    #gifs .card .bigImage {
+      margin: 0;
+      padding: 0;
+      height: 200px; }
 
 #load {
   display: none;

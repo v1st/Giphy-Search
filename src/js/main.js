@@ -74,8 +74,22 @@ function foundGifs(value, load) {
 
     $x = 0;
     $.each(value.data, function () {
+        /* Variables */
         let $image = $(`<img src="${value.data[$x].images.original.url}">`);
         let $div = $('<div class="card"></div>');
+
+        /* Displaying Gifs */
+        $image.attr("id", $x);
+        $image.click(function(){
+            let $gifs = $("#gifs")[0].childNodes;
+
+            $image.attr("class", "bigImage");
+            for(let x = 0; x < $gifs.length; x++){
+                if($gifs[x].childNodes[0].id != event.srcElement.id){
+                    // Make the rest of the images smaller
+                }
+            }
+        });
         $div.append($image);
         $area.append($div);
         $x++;
@@ -173,4 +187,3 @@ function getYear() {
 
     changeRGB();
 })();
-// Function for changing title using typed.js
