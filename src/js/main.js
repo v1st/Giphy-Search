@@ -60,6 +60,7 @@ function search(value, offset) {
 function checkingResults(value) {
     // Displays results or error message if not found
     const load = $('#load');
+    console.log(value);
     (value.data.length > 0) ? foundGifs(value, load): badSearch(load);
 }
 // Function for populating the page
@@ -79,22 +80,17 @@ function foundGifs(value, load) {
         let $div = $('<div class="card"></div>');
 
         /* Displaying Gifs */
-        $image.attr("id", $x);
-        $image.click(function(){
-            let $gifs = $("#gifs")[0].childNodes;
-
-            $image.attr("class", "bigImage");
-            for(let x = 0; x < $gifs.length; x++){
-                if($gifs[x].childNodes[0].id != event.srcElement.id){
-                    // Make the rest of the images smaller
-                }
-            }
-        });
         $div.append($image);
         $area.append($div);
         $x++;
     });
-    load.css('display', 'flex');
+    if(value.pagination.total_count > 25){
+        if (parseInt(value.pagination.offset) + parseInt(value.pagination.count) != parseInt(value.pagination.total_count)){
+            load.css('display', 'flex');
+        } else {
+            load.css('display', 'none');
+        }
+    }
     $('#divBox').slideDown("slow");
 }
 // Function for Displaying an Error Message
