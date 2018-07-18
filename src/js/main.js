@@ -60,7 +60,6 @@ function search(value, offset) {
 function checkingResults(value) {
     // Displays results or error message if not found
     const load = $('#load');
-    console.log(value);
     (value.data.length > 0) ? foundGifs(value, load): badSearch(load);
 }
 // Function for populating the page
